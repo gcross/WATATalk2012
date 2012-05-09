@@ -38,6 +38,18 @@ function makePartFocusActor(name,labels) { return function() { // {{{
 // }}}
 
 // Actors {{{
+function makeDivergenceCurveActor() { return function() { // {{{
+    actor = new UseActor("divergence.curve")
+    actor.curviness = 0
+    node = document.getElementById("divergence.curve")
+    appendToMethod(actor,"update",function() {
+        var c1 =  246.30331*this.curviness + 156.147
+        var c2 = -256.25647*this.curviness + 926.05439
+        var c3 =  340.59469*this.curviness + 310.72831
+        node.setAttribute("d","M 156.147,651.323 C " + c1 + ",651.323 " + c2 + "," + c3 + " 926.05439,310.72831")
+    })
+    return actor
+}} // }}}
 // }}} Actors
 
 // Title Management {{{
@@ -66,6 +78,7 @@ function rotateTitle(index) { // {{{
 } // }}}
 // }}}
 var titles = [ // Titles {{{
+    "Divergence",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -88,7 +101,50 @@ window.addEventListener("load",function() {
     // Title {{{
         hire("title_slide"),
         "",
+        fadeOutAndFire(1,"title_slide"),
+        hireAndFadeInUseActors(0.5,
+            "standard_backdrop",
+            titles[nextTitleIndex()]
+        ),
     // }}} Title
+    // Divergence {{{
+        hireAndFadeIn(0.5,"divergence.question"),
+        "",
+        hireUseActor("divergence.divergence.cover","divergence.question"),
+        hireUseActor("divergence.divergence","divergence.divergence.cover"),
+        linear(0.5,"divergence.divergence.cover","x",220),
+        fire("divergence.divergence.cover"),
+        "",
+        hireAndFadeIn(0.5,"divergence.escape"),
+        "",
+        hireAndFadeIn(0.5,"divergence.embrace"),
+        "",
+        fadeOutAndFire(0.5,
+            "divergence.question",
+            "divergence.divergence",
+            "divergence.escape",
+            "divergence.embrace"
+        ),
+        hireAndFadeIn(0.5,"divergence.backdrop"),
+        "",
+        hireUseActor("divergence.cover","divergence.backdrop"),
+        hireUseActor("divergence.infinity","divergence.cover"),
+        hire("divergence.curve",makeDivergenceCurveActor(),"divergence.cover"),
+        linear(0.5,"divergence.cover","x",800),
+        fire("divergence.cover"),
+        "",
+        linear(0.5,"divergence.curve","curviness",1),
+        "",
+        hireAndFadeIn(0.5,"divergence.function"),
+        "",
+        fadeOutAndFire(0.5,
+            "divergence.backdrop",
+            "divergence.curve",
+            "divergence.infinity",
+            "divergence.function"
+        ),
+        "",
+    // }}}
 // }}} Script
     ]))
 },false)
