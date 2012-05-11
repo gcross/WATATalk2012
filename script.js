@@ -27,8 +27,8 @@ function makePartFocusActor(name,labels) { return function() { // {{{
     appendToMethod(actor,"update",function() {
         labels.forEach(function(label) {
             nodes[label].setAttribute("opacity",Math.max(
-                actor.non_focused_opacity,
-                actor[label + ".opacity"]
+                this.non_focused_opacity,
+                this[label + ".opacity"]
             ))
         })
     })
@@ -39,9 +39,9 @@ function makePartFocusActor(name,labels) { return function() { // {{{
 
 // Actors {{{
 function makeDivergenceCurveActor() { return function() { // {{{
-    actor = new UseActor("divergence.curve")
+    var actor = new UseActor("divergence.curve")
     actor.curviness = 0
-    node = document.getElementById("divergence.curve")
+    var node = document.getElementById("divergence.curve")
     appendToMethod(actor,"update",function() {
         var c1 =  246.30331*this.curviness + 156.147
         var c2 = -256.25647*this.curviness + 926.05439
@@ -51,7 +51,7 @@ function makeDivergenceCurveActor() { return function() { // {{{
     return actor
 }} // }}}
 function makeDivergingAutomataActor() { return function() { // {{{
-    actor = makePartFocusActor("diverging_automata.automata",[
+    var actor = makePartFocusActor("diverging_automata.automata",[
         "final_weights.1",
         "final_weights.2",
         "state.1",
@@ -62,10 +62,14 @@ function makeDivergingAutomataActor() { return function() { // {{{
     actor["final_weights.1.opacity_override"] = 1
     actor["final_weights.2.opacity_override"] = 1
     appendToMethod(actor,"update",function() {
-        for(i = 1; i <= 2; ++i) {
+        for(var i = 1; i <= 2; ++i) {
             label = "final_weights." + i
-            node = actor.nodes[label]
-            node.setAttribute("opacity",actor[label + ".opacity_override"]*node.getAttribute("opacity"))
+            node = this.nodes[label]
+            node.setAttribute("opacity",this[label + ".opacity_override"]*node.getAttribute("opacity"))
+        }
+    })
+    return actor
+}} // }}}
         }
     })
     return actor
