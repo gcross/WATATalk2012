@@ -252,7 +252,7 @@ window.addEventListener("load",function() {
         linear(0.5,styleFor("diverging_automata.criterion.lhs"),"opacity",1),
         "",
       // }}}
-    // First example {{{
+      // First example {{{
         hireAndFlashIn(0.5,0.25,
             "diverging_automata.input.1.1",
             "diverging_automata.input.2.0",
@@ -459,8 +459,8 @@ window.addEventListener("load",function() {
         ),
         fire("diverging_automata.reader"),
         "",
-    // }}}
-    // Second example {{{
+      // }}}
+      // Second example {{{
         fadeOutAndFire(0.25,"diverging_automata.input.1.1"),
         hireAndFadeIn(0.25,"diverging_automata.input.1.0"),
         "",
@@ -561,8 +561,8 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(0.5,"diverging_automata.weight.1.0"),
         "",
-    // }}}
-    // Third example {{{
+      // }}}
+      // Third example {{{
         parallel(
             sequence(
                 fadeOutAndFire(0.25,"diverging_automata.input.1.0"),
@@ -678,7 +678,7 @@ window.addEventListener("load",function() {
             "diverging_automata.weight.1.0"
         ),
         "",
-    // }}}
+      // }}}
         fadeOutAndFire(0.25,
             "diverging_automata.5tuple",
             "diverging_automata.5tuple.cover",
@@ -699,7 +699,7 @@ window.addEventListener("load",function() {
             "diverging_automata.input.3.0",
             "diverging_automata.input.4plus"
         ),
-  // }}}
+    // }}}
 // }}} Script
     ]))
 },false)
