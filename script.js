@@ -102,8 +102,11 @@ var titles = [ // Titles {{{
     "Diverging Automata",
     "Infinite Languages",
     "Diverging Languages",
-    "Rational Operations",
+    "Rational Operations for Diverging Languages",
     "Kleene's Theorem for Diverging Languages",
+    "Bi-diverging Languages",
+    "Bi-diverging Automata",
+    "Kleene's Theorem for Bi-diverging Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -948,6 +951,75 @@ window.addEventListener("load",function() {
             "diverging_kleene1",
             "diverging_kleene2",
             "diverging_kleene3"
+        ),
+    // }}}
+    // Bi-diverging languages {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"bidiverging_language"),
+        "",
+        hireAndFadeIn(0.5,"bidiverging_juxtaposition_operator"),
+        "",
+        hireAndFadeIn(0.5,"bidiverging_rational_language"),
+        "",
+        fadeOutAndFire(0.5,
+            "bidiverging_language",
+            "bidiverging_juxtaposition_operator",
+            "bidiverging_rational_language"
+        ),
+    // }}}
+    // Bi-diverging automata {{{
+        rotateNextTitle(),
+        hireUseActors("bidiverging_automata.5tuple","bidiverging_automata.5tuple.cover"),
+        linear(0.5,"bidiverging_automata.5tuple.cover","x",470),
+        hireAndFlashIn(0.5,0.25,
+            "bidiverging_automata.5tuple.alphabet",
+            "bidiverging_automata.5tuple.states",
+            "bidiverging_automata.5tuple.transitions",
+            "bidiverging_automata.5tuple.initial",
+            "bidiverging_automata.5tuple.final"
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("bidiverging_automata.5tuple.alphabet"),"opacity",0.25),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.states"),"opacity",0.25),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.transitions"),"opacity",0.25),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.final"),"opacity",0.25)
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("bidiverging_automata.5tuple.alphabet"),"opacity",1),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.states"),"opacity",1),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.transitions"),"opacity",1),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.final"),"opacity",1)
+        ),
+        hireAndFadeIn(0.5,"bidiverging_automata.criterion.1"),
+        "",
+        hireAndFadeIn(0.5,"bidiverging_automata.criterion.2"),
+        "",
+        fadeOutAndFire(0.5,
+            "bidiverging_automata.5tuple",
+            "bidiverging_automata.5tuple.alphabet",
+            "bidiverging_automata.5tuple.cover",
+            "bidiverging_automata.5tuple.states",
+            "bidiverging_automata.5tuple.transitions",
+            "bidiverging_automata.5tuple.initial",
+            "bidiverging_automata.5tuple.final",
+            "bidiverging_automata.criterion.1",
+            "bidiverging_automata.criterion.2"
+        ),
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "bidiverging_kleene1",
+            "bidiverging_kleene2",
+            "bidiverging_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "bidiverging_kleene1",
+            "bidiverging_kleene2",
+            "bidiverging_kleene3"
         ),
     // }}}
 // }}} Script
