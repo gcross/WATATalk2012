@@ -103,6 +103,7 @@ var titles = [ // Titles {{{
     "Infinite Languages",
     "Diverging Languages",
     "Rational Operations",
+    "Kleene's Theorem for Diverging Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -933,6 +934,20 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_output_dots",
             "diverging_rational_operations_identity",
             "diverging_rational_language_definition"
+        ),
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
         ),
     // }}}
 // }}} Script
