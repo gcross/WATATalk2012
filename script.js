@@ -70,10 +70,6 @@ function makeDivergingAutomataActor() { return function() { // {{{
     })
     return actor
 }} // }}}
-        }
-    })
-    return actor
-}} // }}}
 // }}} Actors
 
 // Title Management {{{
@@ -1025,6 +1021,29 @@ window.addEventListener("load",function() {
             "bidiverging_kleene2",
             "bidiverging_kleene3"
         ),
+    // }}}
+    // Infinite system {{{
+        hireAndFadeIn(0.5,"is.particle.0"),
+]).concat((function() {
+    var animations = []
+    for(var i = -9; i <= +9; ++i) {
+        if(i != 0) {
+            animations.push(hire("is.particle." + i))
+            animations.push(set("is.particle." + i,"x",-i*80))
+        }
+    }
+    return animations
+})()).concat([
+        "",
+]).concat((function() {
+    var animations = []
+    for(var i = -9; i <= +9; ++i) {
+        if(i != 0) {
+            animations.push(decelerate(0.5,"is.particle." + i,"x",0))
+        }
+    }
+    return parallel.apply(null,animations)
+})()).concat([
     // }}}
 // }}} Script
     ]))
