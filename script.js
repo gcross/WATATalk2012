@@ -155,10 +155,13 @@ function rotateTitle(index) { // {{{
 } // }}}
 // }}}
 var titles = [ // Titles {{{
-    "Main Result",
-    "Outline",
-    "Matrix Product States",
-    "Weighted Automata",
+    "Motivation",
+    "Incorporating Weights into Infinite Languages",
+    "Embrace Divergence!",
+    "Infinite Languages",
+    "Diverging Languages",
+    "Rational Operations",
+    "Diverging Automata",
     "Matrix Product States ⇒ Weighted Automata",
     "Matrix Product States ⇐ Weighted Automata",
     "Kleene's Theorem",
@@ -207,7 +210,107 @@ window.addEventListener("load",function() {
             titles[nextTitleIndex()]
         ),
     // }}} Title
+    // Infinite system {{{
+        hireAndFadeIn(0.5,"is.particle.0"),
+]).concat((function() {
+    var animations = []
+    for(var i = -9; i <= +9; ++i) {
+        if(i != 0) {
+            animations.push(hire("is.particle." + i))
+            animations.push(set("is.particle." + i,"x",-i*80))
+        }
+    }
+    return animations
+})()).concat([
+        "",
+]).concat((function() {
+    var animations = []
+    for(var i = -9; i <= +9; ++i) {
+        if(i != 0) {
+            animations.push(decelerate(0.5,"is.particle." + i,"x",0))
+        }
+    }
+    return parallel.apply(null,animations)
+})()).concat([
+        "",
+]).concat((function() {
+    var animations = []
+    spins =
+        ['down',
+         'down',
+         'up',
+         'down',
+         'up',
+         'up',
+         'up',
+         'down',
+         'up',
+         'down',
+         'down',
+         'down',
+         'down']
+    for(var i = -6; i <= +6; ++i) {
+        var id = "is.arrow." + i + "." + spins[i+6]
+        animations.push(sequence(
+            wait(Math.abs(i)*0.1),
+            hireAndFadeIn(0.2,id)
+        ))
+    }
+    return parallel.apply(null,animations)
+})()).concat([
+        "",
+        hireAndFadeIn(0.5,"is.bulk"),
+        "",
+        hireAndFadeIn(0.5,"is.avagadro"),
+        "",
+        hireAndFadeIn(0.5,"is.negligible_boundary_effects"),
+        "",
+        fadeOutAndFire(0.5,
+            "is.bulk",
+            "is.avagadro",
+            "is.negligible_boundary_effects"
+        ),
+        hireUseActor("is.proper_search","is.particle.0"),
+        fadeIn(0.5,"is.proper_search",0),
+        "",
+        fadeOutAndFire(0.5,"is.proper_search"),
+        "",
+        parallel(
+            hireAndFadeIn(0.5,"is.defn.1"),
+            sequence(
+                wait(0.25),
+                hireAndFadeIn(0.5,"is.defn.2",makePartFocusActor("is.defn.2",["domain","range","misc"]))
+            ),
+            sequence(
+                wait(0.5),
+                hireAndFadeIn(0.5,"is.defn.3")
+            )
+        ),
+        "",
+        set("is.defn.2","domain.opacity",1),
+        linear(0.5,"is.defn.2","non_focused_opacity",0.33),
+        "",
+        parallel(
+            linear(0.5,"is.defn.2","domain.opacity",0),
+            linear(0.5,"is.defn.2","range.opacity",1)
+        ),
+        "",
+        linear(0.5,"is.defn.2","non_focused_opacity",1),
+        set("is.defn.2","range.opacity",0),
+        "",
+]).concat((function() {
+    var actor_names = [0.5]
+    for(var i = 1; i <= 3; ++i) actor_names.push("is.defn." + i)
+    for(var i = -6; i <= +6; ++i) {
+        actor_names.push("is.particle." + i)
+        actor_names.push("is.arrow." + i + "." + spins[i+6])
+    }
+    return fadeOutAndFire.apply(null,actor_names)
+})()).concat([        
+    // }}}
     // Divergence {{{
+        rotateNextTitle(),
+        "",
         hireAndFadeIn(0.5,"divergence.question"),
         "",
         hireUseActor("divergence.divergence.cover","divergence.question"),
@@ -225,6 +328,7 @@ window.addEventListener("load",function() {
             "divergence.escape",
             "divergence.embrace"
         ),
+        rotateNextTitle(),
         hireAndFadeIn(0.5,"divergence.backdrop"),
         "",
         hireUseActor("divergence.cover","divergence.backdrop"),
@@ -233,15 +337,260 @@ window.addEventListener("load",function() {
         linear(0.5,"divergence.cover","x",800),
         fire("divergence.cover"),
         "",
-        linear(0.5,"divergence.curve","curviness",1),
-        "",
         hireAndFadeIn(0.5,"divergence.function"),
+        "",
+        linear(0.5,"divergence.curve","curviness",1),
         "",
         fadeOutAndFire(0.5,
             "divergence.backdrop",
             "divergence.curve",
             "divergence.infinity",
             "divergence.function"
+        ),
+    // }}}
+    // Infinite languages {{{
+        rotateNextTitle(),
+        hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.alphabet"),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.alphabet.example"),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.words.finite"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "infinite_languages.words.finite.examples.1",
+            "infinite_languages.words.finite.examples.2"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.words.infinite"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "infinite_languages.words.infinite.examples.1",
+            "infinite_languages.words.infinite.examples.2"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.words.nfinite"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "infinite_languages.words.nfinite.examples.1",
+            "infinite_languages.words.nfinite.examples.2"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "infinite_languages.borderlines",
+            "infinite_languages.alphabet",
+            "infinite_languages.alphabet.example",
+            "infinite_languages.words.finite",
+            "infinite_languages.words.finite.examples.1",
+            "infinite_languages.words.finite.examples.2",
+            "infinite_languages.words.infinite",
+            "infinite_languages.words.infinite.examples.1",
+            "infinite_languages.words.infinite.examples.2",
+            "infinite_languages.words.nfinite",
+            "infinite_languages.words.nfinite.examples.1",
+            "infinite_languages.words.nfinite.examples.2"
+        ),
+// }}}
+    // Diverging languages {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"diverging_languages.borderlines"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.alphabet"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.semiring"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.words.finite"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.words.infinite"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.language"),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_languages.borderlines",
+            "diverging_languages.alphabet",
+            "diverging_languages.semiring",
+            "diverging_languages.words.finite",
+            "diverging_languages.words.infinite",
+            "diverging_languages.language"
+        ),
+    // }}}
+    // Rational diverging operations {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "diverging_rational_operations_box_1",
+            "diverging_rational_operations_box_2",
+            "diverging_rational_operations_box_3",
+            "diverging_rational_operations_box_4"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_1"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_1"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_2"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_2"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_3"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_3"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_4"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_4"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_5"),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_rational_operations_box_1",
+            "diverging_rational_operations_box_2",
+            "diverging_rational_operations_box_3",
+            "diverging_rational_operations_box_4",
+            "diverging_rational_operations_precondition_1",
+            "diverging_rational_operations_precondition_2",
+            "diverging_rational_operations_precondition_3",
+            "diverging_rational_operations_precondition_4",
+            "diverging_rational_operations_definition_1",
+            "diverging_rational_operations_definition_2",
+            "diverging_rational_operations_definition_4"
+        ),
+        parallel(
+            smooth(0.5,"diverging_rational_operations_definition_5","y",-450.0),
+            smooth(0.5,"diverging_rational_operations_definition_3","y",-320.0)
+        ),
+        "",
+        hireAndFadeInUseActor(0.5,"diverging_rational_operations_definition_6"),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_identity"),
+        "",
+        hireAndFadeInUseActors(0.5,
+            "diverging_rational_operations_example_box",
+            "diverging_rational_operations_example_input_frame",
+            "diverging_rational_operations_example_input_1",
+            "diverging_rational_operations_example_input_2",
+            "diverging_rational_operations_example_input_3"
+        ),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "diverging_rational_operations_example_letter_1",
+            "diverging_rational_operations_example_letter_2",
+            "diverging_rational_operations_example_letter_3",
+            "diverging_rational_operations_example_letter_4",
+            "diverging_rational_operations_example_letter_5plus",
+            "diverging_rational_operations_example_letter_mapsto",
+            "diverging_rational_operations_example_output_box"
+        ),
+        "",
+        hireAndFadeInUseActors(0.5,
+            "diverging_rational_operations_example_letter_pointer_left",
+            "diverging_rational_operations_example_output_0_mapsto"
+        ),
+        "",
+        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_0_mapsto_0"),
+        "",
+        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
+        "",
+        hireUseActors(
+            "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_cover"
+        ),
+        moveToEnd("diverging_rational_operations_example_letter_pointer_left"),
+        moveToEnd("diverging_rational_operations_example_box"),
+        parallel(
+            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",28),
+            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_1_mapsto")
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",0.25),
+            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",0.25)
+        ),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_1_mapsto_1_2"),
+        "",
+        parallel(
+            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",1),
+            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",1)
+        ),
+        "",
+        parallel(
+            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",52),
+            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_2_mapsto")
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
+            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",0.25),
+            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",0.25)
+        ),
+        "",
+        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
+        "",
+        parallel(
+            linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
+            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",1)
+        ),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_2_mapsto_5_4"),
+        "",
+        parallel(
+            linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
+            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",1)
+        ),
+        "",
+        parallel(
+            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",76),
+            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_3_mapsto")
+        ),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_3_mapsto_0"),
+        "",
+        parallel(
+            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",100),
+            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_4_mapsto")
+        ),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_4_mapsto_5_2"),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_dots"),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_language_definition"),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_rational_operations_definition_3",
+            "diverging_rational_operations_definition_5",
+            "diverging_rational_operations_definition_6",
+            "diverging_rational_operations_example_box",
+            "diverging_rational_operations_example_input_frame",
+            "diverging_rational_operations_example_input_1",
+            "diverging_rational_operations_example_input_2",
+            "diverging_rational_operations_example_input_3",
+            "diverging_rational_operations_example_letter_1",
+            "diverging_rational_operations_example_letter_2",
+            "diverging_rational_operations_example_letter_3",
+            "diverging_rational_operations_example_letter_4",
+            "diverging_rational_operations_example_letter_5plus",
+            "diverging_rational_operations_example_letter_mapsto",
+            "diverging_rational_operations_example_output_box",
+            "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_cover",
+            "diverging_rational_operations_example_letter_pointer_left",
+            "diverging_rational_operations_example_output_0_mapsto",
+            "diverging_rational_operations_example_output_0_mapsto_0",
+            "diverging_rational_operations_example_output_1_mapsto",
+            "diverging_rational_operations_example_output_1_mapsto_1_2",
+            "diverging_rational_operations_example_output_2_mapsto",
+            "diverging_rational_operations_example_output_2_mapsto_5_4",
+            "diverging_rational_operations_example_output_3_mapsto",
+            "diverging_rational_operations_example_output_3_mapsto_0",
+            "diverging_rational_operations_example_output_4_mapsto",
+            "diverging_rational_operations_example_output_4_mapsto_5_2",
+            "diverging_rational_operations_example_output_dots",
+            "diverging_rational_operations_identity",
+            "diverging_rational_language_definition"
         ),
     // }}}
   // Diverging automata {{{
@@ -724,251 +1073,6 @@ window.addEventListener("load",function() {
             "diverging_automata.input.4plus"
         ),
   // }}}
-    // Infinite languages {{{
-        rotateNextTitle(),
-        hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
-        "",
-        hireAndFadeInUseActor(0.5,"infinite_languages.alphabet"),
-        "",
-        hireAndFadeInUseActor(0.5,"infinite_languages.alphabet.example"),
-        "",
-        hireAndFadeInUseActor(0.5,"infinite_languages.words.finite"),
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "infinite_languages.words.finite.examples.1",
-            "infinite_languages.words.finite.examples.2"
-        ),
-        "",
-        hireAndFadeInUseActor(0.5,"infinite_languages.words.infinite"),
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "infinite_languages.words.infinite.examples.1",
-            "infinite_languages.words.infinite.examples.2"
-        ),
-        "",
-        hireAndFadeInUseActor(0.5,"infinite_languages.words.nfinite"),
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "infinite_languages.words.nfinite.examples.1",
-            "infinite_languages.words.nfinite.examples.2"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "infinite_languages.borderlines",
-            "infinite_languages.alphabet",
-            "infinite_languages.alphabet.example",
-            "infinite_languages.words.finite",
-            "infinite_languages.words.finite.examples.1",
-            "infinite_languages.words.finite.examples.2",
-            "infinite_languages.words.infinite",
-            "infinite_languages.words.infinite.examples.1",
-            "infinite_languages.words.infinite.examples.2",
-            "infinite_languages.words.nfinite",
-            "infinite_languages.words.nfinite.examples.1",
-            "infinite_languages.words.nfinite.examples.2"
-        ),
-// }}}
-    // Diverging languages {{{
-        rotateNextTitle(),
-        hireAndFadeIn(0.5,"diverging_languages.borderlines"),
-        "",
-        hireAndFadeIn(0.5,"diverging_languages.alphabet"),
-        "",
-        hireAndFadeIn(0.5,"diverging_languages.semiring"),
-        "",
-        hireAndFadeIn(0.5,"diverging_languages.words.finite"),
-        "",
-        hireAndFadeIn(0.5,"diverging_languages.words.infinite"),
-        "",
-        hireAndFadeIn(0.5,"diverging_languages.language"),
-        "",
-        fadeOutAndFire(0.5,
-            "diverging_languages.borderlines",
-            "diverging_languages.alphabet",
-            "diverging_languages.semiring",
-            "diverging_languages.words.finite",
-            "diverging_languages.words.infinite",
-            "diverging_languages.language"
-        ),
-    // }}}
-    // Rational diverging operations {{{
-        rotateNextTitle(),
-        hireAndFlashIn(0.5,0.25,
-            "diverging_rational_operations_box_1",
-            "diverging_rational_operations_box_2",
-            "diverging_rational_operations_box_3",
-            "diverging_rational_operations_box_4"
-        ),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_1"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_1"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_2"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_2"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_3"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_3"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_4"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_4"),
-        "",
-        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_5"),
-        "",
-        fadeOutAndFire(0.5,
-            "diverging_rational_operations_box_1",
-            "diverging_rational_operations_box_2",
-            "diverging_rational_operations_box_3",
-            "diverging_rational_operations_box_4",
-            "diverging_rational_operations_precondition_1",
-            "diverging_rational_operations_precondition_2",
-            "diverging_rational_operations_precondition_3",
-            "diverging_rational_operations_precondition_4",
-            "diverging_rational_operations_definition_1",
-            "diverging_rational_operations_definition_2",
-            "diverging_rational_operations_definition_4"
-        ),
-        parallel(
-            smooth(0.5,"diverging_rational_operations_definition_5","y",-450.0),
-            smooth(0.5,"diverging_rational_operations_definition_3","y",-320.0)
-        ),
-        "",
-        hireAndFadeInUseActor(0.5,"diverging_rational_operations_definition_6"),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_identity"),
-        "",
-        hireAndFadeInUseActors(0.5,
-            "diverging_rational_operations_example_box",
-            "diverging_rational_operations_example_input_frame",
-            "diverging_rational_operations_example_input_1",
-            "diverging_rational_operations_example_input_2",
-            "diverging_rational_operations_example_input_3"
-        ),
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "diverging_rational_operations_example_letter_1",
-            "diverging_rational_operations_example_letter_2",
-            "diverging_rational_operations_example_letter_3",
-            "diverging_rational_operations_example_letter_4",
-            "diverging_rational_operations_example_letter_5plus",
-            "diverging_rational_operations_example_letter_mapsto",
-            "diverging_rational_operations_example_output_box"
-        ),
-        "",
-        hireAndFadeInUseActors(0.5,
-            "diverging_rational_operations_example_letter_pointer_left",
-            "diverging_rational_operations_example_output_0_mapsto"
-        ),
-        "",
-        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_0_mapsto_0"),
-        "",
-        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
-        "",
-        hireUseActors(
-            "diverging_rational_operations_example_letter_pointer",
-            "diverging_rational_operations_example_letter_pointer_cover"
-        ),
-        moveToEnd("diverging_rational_operations_example_letter_pointer_left"),
-        moveToEnd("diverging_rational_operations_example_box"),
-        parallel(
-            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",28),
-            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_1_mapsto")
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",0.25),
-            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",0.25)
-        ),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_1_mapsto_1_2"),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",1),
-            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",1)
-        ),
-        "",
-        parallel(
-            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",52),
-            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_2_mapsto")
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
-            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",0.25),
-            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",0.25)
-        ),
-        "",
-        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
-            linear(0.5,styleFor("diverging_rational_operations_example_input_2"),"opacity",1)
-        ),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_2_mapsto_5_4"),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
-            linear(0.5,styleFor("diverging_rational_operations_example_input_3"),"opacity",1)
-        ),
-        "",
-        parallel(
-            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",76),
-            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_3_mapsto")
-        ),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_3_mapsto_0"),
-        "",
-        parallel(
-            smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",100),
-            hireAndFadeIn(0.5,"diverging_rational_operations_example_output_4_mapsto")
-        ),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_4_mapsto_5_2"),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_example_output_dots"),
-        "",
-        hireAndFadeIn(0.5,"diverging_rational_language_definition"),
-        "",
-        fadeOutAndFire(0.5,
-            "diverging_rational_operations_definition_3",
-            "diverging_rational_operations_definition_5",
-            "diverging_rational_operations_definition_6",
-            "diverging_rational_operations_example_box",
-            "diverging_rational_operations_example_input_frame",
-            "diverging_rational_operations_example_input_1",
-            "diverging_rational_operations_example_input_2",
-            "diverging_rational_operations_example_input_3",
-            "diverging_rational_operations_example_letter_1",
-            "diverging_rational_operations_example_letter_2",
-            "diverging_rational_operations_example_letter_3",
-            "diverging_rational_operations_example_letter_4",
-            "diverging_rational_operations_example_letter_5plus",
-            "diverging_rational_operations_example_letter_mapsto",
-            "diverging_rational_operations_example_output_box",
-            "diverging_rational_operations_example_letter_pointer",
-            "diverging_rational_operations_example_letter_pointer_cover",
-            "diverging_rational_operations_example_letter_pointer_left",
-            "diverging_rational_operations_example_output_0_mapsto",
-            "diverging_rational_operations_example_output_0_mapsto_0",
-            "diverging_rational_operations_example_output_1_mapsto",
-            "diverging_rational_operations_example_output_1_mapsto_1_2",
-            "diverging_rational_operations_example_output_2_mapsto",
-            "diverging_rational_operations_example_output_2_mapsto_5_4",
-            "diverging_rational_operations_example_output_3_mapsto",
-            "diverging_rational_operations_example_output_3_mapsto_0",
-            "diverging_rational_operations_example_output_4_mapsto",
-            "diverging_rational_operations_example_output_4_mapsto_5_2",
-            "diverging_rational_operations_example_output_dots",
-            "diverging_rational_operations_identity",
-            "diverging_rational_language_definition"
-        ),
-    // }}}
     // Kleene's Theorem {{{
         rotateNextTitle(),
         hireAndFlashIn(0.75,0.375,
@@ -1051,29 +1155,6 @@ window.addEventListener("load",function() {
             "bidiverging_kleene2",
             "bidiverging_kleene3"
         ),
-    // }}}
-    // Infinite system {{{
-        hireAndFadeIn(0.5,"is.particle.0"),
-]).concat((function() {
-    var animations = []
-    for(var i = -9; i <= +9; ++i) {
-        if(i != 0) {
-            animations.push(hire("is.particle." + i))
-            animations.push(set("is.particle." + i,"x",-i*80))
-        }
-    }
-    return animations
-})()).concat([
-        "",
-]).concat((function() {
-    var animations = []
-    for(var i = -9; i <= +9; ++i) {
-        if(i != 0) {
-            animations.push(decelerate(0.5,"is.particle." + i,"x",0))
-        }
-    }
-    return parallel.apply(null,animations)
-})()).concat([
     // }}}
 // }}} Script
     ]))

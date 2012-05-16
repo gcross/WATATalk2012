@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="1024"
+   height="768"
+   id="svg2"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="infinite_system3.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1152"
+     id="namedview4066"
+     showgrid="false"
+     inkscape:zoom="0.5"
+     inkscape:cx="631.8511"
+     inkscape:cy="270.94382"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata26767">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs26765">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path7251"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path7257"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+  </defs>
+  <g
+     id="is.defn.2"
+     inkscape:label="#g19487">
+    <g
+       inkscape:label="#g19480"
+       id="is.defn.2.misc">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:3.79049993;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+         d="m 613.31795,532.04747 -102.23005,0 107.05221,0"
+         id="path4262"
+         inkscape:connector-curvature="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5228"
+         y="561.01044"
+         x="288.91733"
+         style="font-size:89.37800598px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"><tspan
+           y="561.01044"
+           x="288.91733"
+           id="tspan5230"
+           sodipodi:role="line">S</tspan></text>
+      <path
+         sodipodi:type="arc"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker-end:none"
+         id="path5303-5"
+         sodipodi:cx="460"
+         sodipodi:cy="373"
+         sodipodi:rx="10"
+         sodipodi:ry="15"
+         d="m 470,373 a 10,15 0 1 1 -20,0 10,15 0 1 1 20,0 z"
+         transform="matrix(0.46399282,0,0,0.30932857,150.76092,402.45835)" />
+      <path
+         transform="matrix(0.46399282,0,0,0.30932857,150.76092,428.99185)"
+         d="m 470,373 a 10,15 0 1 1 -20,0 10,15 0 1 1 20,0 z"
+         sodipodi:ry="15"
+         sodipodi:rx="10"
+         sodipodi:cy="373"
+         sodipodi:cx="460"
+         id="path5305"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker-end:none"
+         sodipodi:type="arc" />
+    </g>
+    <g
+       inkscape:label="#g19416"
+       id="is.defn.2.domain">
+      <g
+         id="g13355"
+         transform="matrix(0.947625,0,0,0.947625,74.309647,-4.331534)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 332.07466,530.48038 c 3.66089,3.30643 25.12918,28.48007 31.49786,35.74692 -6.36868,6.63271 -24.13406,26.58919 -29.02204,32.54208 l 64.59646,0 0,-17.25716 c -5.72881,3.26065 -9.52652,6.821 -15.08001,10.47509 l -32.86092,0.12573 25.65852,-28.59756 0,-0.24654 -23.63287,-26.13223 c 7.4016,-0.28097 29.15249,0.37889 32.63584,0.13904 3.56891,2.98035 8.59237,7.30279 12.8293,10.21523 l 0,-17.0106 -66.62214,0 z"
+           id="path3112"
+           style="font-size:12px;fill:#000000;fill-opacity:1;stroke:none" />
+        <text
+           xml:space="preserve"
+           style="font-size:51.67696381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+           x="409.07727"
+           y="547.37866"
+           id="text3114"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3116"
+             x="409.07727"
+             y="547.37866">ζ</tspan></text>
+      </g>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+         d="m 435.82858,570.77209 0,56.117"
+         id="path12963"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.20000076px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         x="436.56152"
+         y="652.47498"
+         id="text12965"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan12967"
+           x="436.56152"
+           y="652.47498">set of bi-infinite</tspan><tspan
+           sodipodi:role="line"
+           x="436.56152"
+           y="683.97498"
+           id="tspan12969">words containing</tspan><tspan
+           sodipodi:role="line"
+           x="436.56152"
+           y="715.79431"
+           id="tspan12971">⬆ and ⬇</tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+         id="rect13353"
+         width="108.97688"
+         height="95.710121"
+         x="381.34018"
+         y="473.27148" />
+    </g>
+    <g
+       inkscape:label="#g19383"
+       id="is.defn.2.range">
+      <text
+         xml:space="preserve"
+         style="font-size:89.37800598px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         x="649.01465"
+         y="561.01044"
+         id="text3118"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3120"
+           x="649.01465"
+           y="561.01044"
+           style="font-weight:bold;-inkscape-font-specification:Arial Bold">C</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path13370"
+         d="m 682.21108,570.77209 0,56.117"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+         sodipodi:nodetypes="cc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text13372"
+         y="652.47498"
+         x="682.94403"
+         style="font-size:25.20000076px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"><tspan
+           id="tspan13378"
+           y="652.47498"
+           x="682.94403"
+           sodipodi:role="line">set of</tspan><tspan
+           y="683.97498"
+           x="682.94403"
+           sodipodi:role="line"
+           id="tspan13387">complex</tspan><tspan
+           y="715.47498"
+           x="682.94403"
+           sodipodi:role="line"
+           id="tspan13734">numbers</tspan></text>
+      <rect
+         y="488.43347"
+         x="644.77985"
+         height="80.548126"
+         width="71.071877"
+         id="rect13380"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0" />
+    </g>
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot13688"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Arial;font-style:normal;font-weight:normal;font-size:24px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+       id="flowRegion13690"><rect
+         id="rect13692"
+         width="216.37468"
+         height="335.16861"
+         x="19.79899"
+         y="411.61819" /></flowRegion><flowPara
+       id="flowPara13694"></flowPara></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="38.375"
+     y="514.8335"
+     id="is.defn.1"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text19310"><tspan
+       sodipodi:role="line"
+       x="158.6875"
+       y="595.56598"
+       id="tspan19312"><tspan
+         x="38.375"
+         y="514.8335"
+         id="tspan19314">Let </tspan><tspan
+         x="91.75"
+         y="514.8335"
+         id="tspan19316">Σ = {</tspan><tspan
+         x="158.6875"
+         y="514.8335"
+         id="tspan19318">⬆,⬇}. </tspan><tspan
+         x="212.3125"
+         y="514.8335"
+         id="tspan19320" /></tspan><tspan
+       sodipodi:role="line"
+       x="38.375"
+       y="635.56598"
+       id="tspan19322"><tspan
+         x="38.375"
+         y="555.56592"
+         id="tspan19324">Then a </tspan></tspan><tspan
+       sodipodi:role="line"
+       x="38.375"
+       y="675.56598"
+       id="tspan19326"><tspan
+         x="38.375"
+         y="595.56598"
+         id="tspan19328">quantum state </tspan></tspan><tspan
+       sodipodi:role="line"
+       x="38.375"
+       y="715.56598"
+       id="tspan19330"><tspan
+         x="38.375"
+         y="635.56598"
+         id="tspan19332">S for the system </tspan></tspan><tspan
+       sodipodi:role="line"
+       x="38.375"
+       y="0"
+       id="tspan19334"><tspan
+         x="38.375"
+         y="675.56598"
+         id="tspan19336">above is a map </tspan></tspan><tspan
+       sodipodi:role="line"
+       x="38.375"
+       y="0"
+       id="tspan19338"><tspan
+         x="38.375"
+         y="715.56598"
+         id="tspan19340">of the form,</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="983.28912"
+     y="514.00537"
+     id="is.defn.3"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text18914"><tspan
+       sodipodi:role="line"
+       id="tspan18916"
+       x="983.28912"
+       y="514.00537">such that for all</tspan><tspan
+       sodipodi:role="line"
+       x="983.28912"
+       y="554.00537"
+       id="tspan18920">configurations <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan19342">c</tspan>,</tspan><tspan
+       sodipodi:role="line"
+       x="983.28912"
+       y="594.00537"
+       id="tspan18918">|S(<tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan19344">c</tspan>)|<tspan
+   style="font-size:65.00091553%;baseline-shift:super"
+   id="tspan18928">2</tspan> gives</tspan><tspan
+       sodipodi:role="line"
+       x="983.28912"
+       y="634.00537"
+       id="tspan18922">the probability</tspan><tspan
+       sodipodi:role="line"
+       x="983.28912"
+       y="674.00537"
+       id="tspan18924">that <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan19346">c</tspan> will be</tspan><tspan
+       sodipodi:role="line"
+       x="983.28912"
+       y="714.00537"
+       id="tspan18926">observed.</tspan></text>
+</svg>
