@@ -170,8 +170,8 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="1.2161458"
-     inkscape:cx="658.93299"
-     inkscape:cy="295.05733"
+     inkscape:cx="687.3013"
+     inkscape:cy="360.83892"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -211,7 +211,7 @@
          id="tspan6276"
          y="263.01636"
          x="107.69459"
-         sodipodi:role="line">(for this example, 0 or 1)</tspan></text>
+         sodipodi:role="line">(in this case, 0 or 1)</tspan></text>
     <rect
        y="187.54631"
        x="18.714554"
@@ -892,8 +892,8 @@
      d="m 727.67036,185.67551 a 4.8762298,4.8762298 0 1 1 -9.75246,0 4.8762298,4.8762298 0 1 1 9.75246,0 z"
      transform="matrix(0.893025,0,0,0.893025,82.020413,7.9630407)" />
   <g
-     id="diverging_automata.criterion.lhs"
-     inkscape:label="#g3246">
+     id="diverging_automata.criterion"
+     inkscape:label="#g3268">
     <text
        sodipodi:linespacing="125%"
        id="text3546"
@@ -910,40 +910,40 @@
        d="m 126.92995,708.69388 49.08956,0"
        id="path12242"
        inkscape:connector-curvature="0" />
-  </g>
-  <text
-     xml:space="preserve"
-     style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="207"
-     y="681.14911"
-     id="diverging_automata.criterion.rhs"
-     sodipodi:linespacing="125%"
-     inkscape:label="#text3246"><tspan
-       sodipodi:role="line"
-       x="207"
+    <text
+       sodipodi:linespacing="125%"
+       id="text3246"
        y="681.14911"
-       id="tspan3248"><tspan
-         x="207"
+       x="207"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       xml:space="preserve"><tspan
+         id="tspan3248"
          y="681.14911"
-         id="tspan3250">The sum of the weights of all paths of length </tspan><tspan
-         style="font-style:italic;-inkscape-font-specification:Arial Italic"
-         id="tspan3252">n</tspan><tspan
-         id="tspan3254"> through the automata </tspan></tspan><tspan
-       sodipodi:role="line"
-       x="207"
-       y="711.14911"
-       id="tspan3256"><tspan
          x="207"
-         id="tspan3258">starting at the initial state, where each path is multiplied by the weight of its </tspan></tspan><tspan
-       sodipodi:role="line"
-       x="207"
-       y="741.14911"
-       id="tspan3260"><tspan
+         sodipodi:role="line"><tspan
+   id="tspan3250"
+   y="681.14911"
+   x="207">the sum of the weights of all paths of length </tspan><tspan
+   id="tspan3252"
+   style="font-style:italic;-inkscape-font-specification:Arial Italic">n</tspan> through the automata </tspan><tspan
+         id="tspan3256"
+         y="711.14911"
          x="207"
-         id="tspan3262">final state if </tspan><tspan
-         style="font-style:italic;-inkscape-font-specification:Arial Italic"
-         id="tspan3264">w</tspan><tspan
-         id="tspan3266"> visits that state infinitely often and zero otherwise.</tspan></tspan></text>
+         sodipodi:role="line"><tspan
+           id="tspan3258"
+           x="207">starting at the initial state, <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan3232">where each path is multiplied by the weight of its </tspan></tspan></tspan><tspan
+         id="tspan3260"
+         y="741.14911"
+         x="207"
+         sodipodi:role="line"><tspan
+           id="tspan3262"
+           x="207"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic">final state if <tspan
+   style="font-style:normal;-inkscape-font-specification:Arial"
+   id="tspan3237">w</tspan> visits that state infinitely often and zero otherwise</tspan></tspan></text>
+  </g>
   <text
      sodipodi:linespacing="125%"
      id="diverging_automata.input.4plus"
@@ -1417,15 +1417,15 @@
   <text
      xml:space="preserve"
      style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="967.43469"
+     x="707.43469"
      y="194.85652"
      id="diverging_automata.weight.result.to_the_n"
      sodipodi:linespacing="125%"
      inkscape:label="#text5863"><tspan
        sodipodi:role="line"
        id="tspan5865"
-       x="967.43469"
-       y="194.85652">n</tspan></text>
+       x="707.43469"
+       y="194.85652">n-1</tspan></text>
   <text
      inkscape:label="#text8517"
      sodipodi:linespacing="125%"
@@ -1462,4 +1462,16 @@
        id="tspan3638"
        x="948.89478"
        y="186.61314">1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="758.75378"
+     y="179.98685"
+     id="diverging_automata.weight.qualifier"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text3226"><tspan
+       sodipodi:role="line"
+       id="tspan3228"
+       x="758.75378"
+       y="179.98685">(for n &gt; 0, otherwise 0)</tspan></text>
 </svg>

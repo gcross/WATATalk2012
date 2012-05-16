@@ -27,8 +27,8 @@ function makePartFocusActor(name,labels) { return function() { // {{{
     appendToMethod(actor,"update",function() {
         labels.forEach(function(label) {
             nodes[label].setAttribute("opacity",Math.max(
-                this.non_focused_opacity,
-                this[label + ".opacity"]
+                actor.non_focused_opacity,
+                actor[label + ".opacity"]
             ))
         })
     })
@@ -38,20 +38,65 @@ function makePartFocusActor(name,labels) { return function() { // {{{
 // }}}
 
 // Actors {{{
-function makeDivergenceCurveActor() { return function() { // {{{
-    var actor = new UseActor("divergence.curve")
-    actor.curviness = 0
-    var node = document.getElementById("divergence.curve")
-    appendToMethod(actor,"update",function() {
-        var c1 =  246.30331*this.curviness + 156.147
-        var c2 = -256.25647*this.curviness + 926.05439
-        var c3 =  340.59469*this.curviness + 310.72831
-        node.setAttribute("d","M 156.147,651.323 C " + c1 + ",651.323 " + c2 + "," + c3 + " 926.05439,310.72831")
+function makePunchLineActor() { // Punch line slide {{{
+    var actor = new UseActor("punch_line")
+    actor.top_set_node = document.getElementById("punch_line_top_set")
+    actor.equals_node = document.getElementById("punch_line_equals")
+    actor.bottom_set_nodes = document.getElementsByClassName("punch_line_bottom_set")
+
+    var labels = [
+        "rational_power_series",
+        "s_operator",
+        "reverse_s_operator",
+        "dot_operators",
+        "sum_operator"
+    ]
+
+    var nodes = {}
+    var opacities = {}
+    labels = labels.map(function(label) {
+        if(typeof label === "string") {
+            node = document.getElementById("punch_line_" + label)
+            if(!node)
+                throw Error("unable to find a node with id '" + "punch_line_" + label + "'")
+            nodes[label] = [node]
+        } else {
+            label = label[0]
+            nodelist = document.getElementsByClassName("punch_line_" + label)
+            if(nodelist.length = 0)
+                throw Error("unable to find any nodes with class '" + "punch_line_" + label + "'")
+            nodes[label] = Array(nodelist.length)
+            for(var i = 0; i < nodelist.length; ++i) nodes[label][i] = nodelist[i];
+        }
+        actor[label + "_opacity"] = 0
+        return label
     })
+    actor.nodes = nodes
+    actor.opacities = opacities
+
+    actor.top_set_opacity = 0
+    actor.equals_opacity = 0
+    actor.bottom_set_opacity = 0
+
+    actor.non_focused_opacity = 1
+
+    appendToMethod(actor,"update",function() {
+        actor.top_set_node.setAttribute("opacity",actor.top_set_opacity*actor.non_focused_opacity)
+        actor.equals_node.setAttribute("opacity",actor.equals_opacity*actor.non_focused_opacity)
+        for(var i = 0; i < actor.bottom_set_nodes.length; ++i)
+            actor.bottom_set_nodes[i].setAttribute("opacity",actor.bottom_set_opacity*actor.non_focused_opacity);
+        labels.forEach(function(label) {
+            actor.nodes[label].forEach(function(node) { node.setAttribute("opacity",Math.max(
+                node.getAttribute("opacity"),
+                actor[label + "_opacity"]
+            ))})
+        })
+    })
+
     return actor
-}} // }}}
+} // }}}
 function makeDivergingAutomataActor() { return function() { // {{{
-    var actor = makePartFocusActor("diverging_automata.automata",[
+    actor = makePartFocusActor("diverging_automata.automata",[
         "final_weights.1",
         "final_weights.2",
         "state.1",
@@ -62,11 +107,23 @@ function makeDivergingAutomataActor() { return function() { // {{{
     actor["final_weights.1.opacity_override"] = 1
     actor["final_weights.2.opacity_override"] = 1
     appendToMethod(actor,"update",function() {
-        for(var i = 1; i <= 2; ++i) {
+        for(i = 1; i <= 2; ++i) {
             label = "final_weights." + i
-            node = this.nodes[label]
-            node.setAttribute("opacity",this[label + ".opacity_override"]*node.getAttribute("opacity"))
+            node = actor.nodes[label]
+            node.setAttribute("opacity",actor[label + ".opacity_override"]*node.getAttribute("opacity"))
         }
+    })
+    return actor
+}} // }}}
+function makeDivergenceCurveActor() { return function() { // {{{
+    actor = new UseActor("divergence.curve")
+    actor.curviness = 0
+    node = document.getElementById("divergence.curve")
+    appendToMethod(actor,"update",function() {
+        var c1 =  246.30331*this.curviness + 156.147
+        var c2 = -256.25647*this.curviness + 926.05439
+        var c3 =  340.59469*this.curviness + 310.72831
+        node.setAttribute("d","M 156.147,651.323 C " + c1 + ",651.323 " + c2 + "," + c3 + " 926.05439,310.72831")
     })
     return actor
 }} // }}}
@@ -98,15 +155,30 @@ function rotateTitle(index) { // {{{
 } // }}}
 // }}}
 var titles = [ // Titles {{{
+    "Main Result",
+    "Outline",
+    "Matrix Product States",
+    "Weighted Automata",
+    "Matrix Product States ⇒ Weighted Automata",
+    "Matrix Product States ⇐ Weighted Automata",
+    "Kleene's Theorem",
+    "Language",
+    "Weighted Language",
+    "Rational Operations for Weighted Languages",
+    "Kleene's Theorem",
+    "Outline",
+    "Infinite Matrix Product States",
     "Divergence",
     "Diverging Automata",
+    "Kleene's Theorem for Diverging Languages",
     "Infinite Languages",
     "Diverging Languages",
     "Rational Operations for Diverging Languages",
     "Kleene's Theorem for Diverging Languages",
+    "Characterization Theorem for Diverging Languages",
+    "Conclusion",
     "Bi-diverging Languages",
     "Bi-diverging Automata",
-    "Kleene's Theorem for Bi-diverging Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -172,7 +244,7 @@ window.addEventListener("load",function() {
             "divergence.function"
         ),
     // }}}
-    // Diverging automata {{{
+  // Diverging automata {{{
         rotateNextTitle(),
       // Introduce the automata {{{
         hireUseActors("diverging_automata.5tuple","diverging_automata.5tuple.cover"),
@@ -184,82 +256,16 @@ window.addEventListener("load",function() {
             "diverging_automata.5tuple.initial",
             "diverging_automata.5tuple.final"
         ),
-        "",
         hire("diverging_automata.automata",makeDivergingAutomataActor()),
         parallel(
             decelerate(1,"diverging_automata.automata","x",520,0),
             hireAndFadeInUseActor(1,"diverging_automata.automata.box")
         ),
         "",
-        parallel(
-            linear(0.5,styleFor("diverging_automata.5tuple.states"),"opacity",0.33),
-            linear(0.5,styleFor("diverging_automata.5tuple.transitions"),"opacity",0.33),
-            linear(0.5,styleFor("diverging_automata.5tuple.initial"),"opacity",0.33),
-            linear(0.5,styleFor("diverging_automata.5tuple.final"),"opacity",0.33),
-            linear(0.5,"diverging_automata.automata","non_focused_opacity",0.33)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_automata.5tuple.alphabet"),"opacity",0.33),
-            linear(0.5,styleFor("diverging_automata.5tuple.states"),"opacity",1),
-            linear(0.5,"diverging_automata.automata","state.2.opacity",1),
-            linear(0.5,"diverging_automata.automata","state.1.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_automata.5tuple.states"),"opacity",0.33),
-            linear(0.5,styleFor("diverging_automata.5tuple.transitions"),"opacity",1),
-            linear(0.5,"diverging_automata.automata","state.1.opacity",0.33),
-            linear(0.5,"diverging_automata.automata","state.2.opacity",0.33),
-            linear(0.5,"diverging_automata.automata","transitions.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_automata.5tuple.transitions"),"opacity",0.33),
-            linear(0.5,styleFor("diverging_automata.5tuple.initial"),"opacity",1),
-            linear(0.5,"diverging_automata.automata","transitions.opacity",0.33),
-            linear(0.5,"diverging_automata.automata","state.1.opacity",1),
-            linear(0.5,"diverging_automata.automata","transitions.initial.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_automata.5tuple.initial"),"opacity",0.33),
-            linear(0.5,styleFor("diverging_automata.5tuple.final"),"opacity",1),
-            linear(0.5,"diverging_automata.automata","transitions.initial.opacity",0.33),
-            linear(0.5,"diverging_automata.automata","state.2.opacity",1),
-            linear(0.5,"diverging_automata.automata","final_weights.1.opacity",1),
-            linear(0.5,"diverging_automata.automata","final_weights.2.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,"diverging_automata.automata","non_focused_opacity",1),
-            linear(0.5,styleFor("diverging_automata.5tuple.alphabet"),"opacity",1),
-            linear(0.5,styleFor("diverging_automata.5tuple.states"),"opacity",1),
-            linear(0.5,styleFor("diverging_automata.5tuple.transitions"),"opacity",1),
-            linear(0.5,styleFor("diverging_automata.5tuple.initial"),"opacity",1),
-            linear(0.5,styleFor("diverging_automata.5tuple.final"),"opacity",1)
-        ),
-        set("diverging_automata.automata","state.1.opacity",0),
-        set("diverging_automata.automata","state.2.opacity",0),
-        set("diverging_automata.automata","final_weights.1.opacity",0),
-        set("diverging_automata.automata","final_weights.2.opacity",0),
-        "",
-        hireAndFadeInUseActors(1,
-            "diverging_automata.criterion.lhs",
-            "diverging_automata.criterion.rhs"
-        ),
-        "",
-        linear(0.5,styleFor("diverging_automata.criterion.rhs"),"opacity",0.33),
-        "",
-        parallel(
-            linear(0.5,styleFor("diverging_automata.criterion.rhs"),"opacity",1),
-            linear(0.5,styleFor("diverging_automata.criterion.lhs"),"opacity",0.33)
-        ),
-        "",
-        linear(0.5,styleFor("diverging_automata.criterion.lhs"),"opacity",1),
+        hireAndFadeIn(1,"diverging_automata.criterion"),
         "",
       // }}}
-      // First example {{{
+    // First example {{{
         hireAndFlashIn(0.5,0.25,
             "diverging_automata.input.1.1",
             "diverging_automata.input.2.0",
@@ -267,10 +273,13 @@ window.addEventListener("load",function() {
             "diverging_automata.input.4plus"
         ),
         "",
-        hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
-        smooth(0.5,"diverging_automata.marker","x",124.169),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.reader"),
+        parallel(
+            sequence(
+                hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
+                smooth(0.5,"diverging_automata.marker","x",124.169)
+            ),
+            hireAndFadeIn(0.5,"diverging_automata.reader")
+        ),
         "",
         smooth(0.5,"diverging_automata.marker","x",336.694),
         "",
@@ -369,13 +378,14 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(0.5,"diverging_automata.weight.1.0"),
         "",
-        sequence(
-            fadeOutAndFire(0.25,"diverging_automata.weight.input.0"),
-            hireAndFadeIn(0.25,"diverging_automata.weight.input.1")
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.0"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.1")
+            ),
+            fadeOutAndFire(0.5,"diverging_automata.weight.1.0"),
+            hireAndFadeIn(0.5,"diverging_automata.reader")
         ),
-        fadeOutAndFire(0.5,"diverging_automata.weight.1.0"),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.reader"),
         "",
         parallel(
             smooth(0.5,"diverging_automata.marker","x",336.694),
@@ -395,12 +405,13 @@ window.addEventListener("load",function() {
         linear(0.5,"diverging_automata.automata","non_focused_opacity",1),
         set("diverging_automata.automata","final_weights.2.opacity",0),
         "",
-        sequence(
-            fadeOutAndFire(0.25,"diverging_automata.weight.input.1"),
-            hireAndFadeIn(0.25,"diverging_automata.weight.input.2")
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.1"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.2")
+            ),
+            smooth(0.5,"diverging_automata.reader","x",106)
         ),
-        "",
-        smooth(0.5,"diverging_automata.reader","x",106),
         "",
         parallel(
             sequence(
@@ -421,7 +432,13 @@ window.addEventListener("load",function() {
             )
         ),
         "",
-        smooth(0.5,"diverging_automata.reader","x",212),
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.2"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.3")
+            ),
+            smooth(0.5,"diverging_automata.reader","x",212)
+        ),
         "",
         parallel(
             sequence(
@@ -442,13 +459,17 @@ window.addEventListener("load",function() {
             )
         ),
         "",
-        sequence(
-            fadeOutAndFire(0.25,"diverging_automata.weight.input.2"),
-            hireAndFadeIn(0.25,"diverging_automata.weight.input.n")
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.3"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.n")
+            ),
+            accelerate(0.5,"diverging_automata.reader","x",500)
         ),
-        "",
+        fire("diverging_automata.reader"),
         parallel(
             fadeOutAndFire(0.25,
+                "diverging_automata.weight.equals",
                 "diverging_automata.weight.1.1",
                 "diverging_automata.weight.2.1_3",
                 "diverging_automata.weight.dot.1",
@@ -459,23 +480,22 @@ window.addEventListener("load",function() {
                 "diverging_automata.weight.result.1_9"
             ),
             hireAndFadeInUseActors(0.5,
-                "diverging_automata.weight.result.1_3",
-                "diverging_automata.weight.result.to_the_n"
-            ),
-            accelerate(0.5,"diverging_automata.reader","x",500)
+                "diverging_automata.weight.1.1_3",
+                "diverging_automata.weight.result.to_the_n",
+                "diverging_automata.weight.qualifier"
+            )
         ),
-        fire("diverging_automata.reader"),
         "",
-      // }}}
-      // Second example {{{
+    // }}}
+    // Second example {{{
         fadeOutAndFire(0.25,"diverging_automata.input.1.1"),
         hireAndFadeIn(0.25,"diverging_automata.input.1.0"),
         "",
         parallel(
             fadeOutAndFire(0.5,
-                "diverging_automata.weight.result.1_3",
+                "diverging_automata.weight.1.1_3",
                 "diverging_automata.weight.result.to_the_n",
-                "diverging_automata.weight.equals"
+                "diverging_automata.weight.qualifier"
             ),
             linear(0.5,"diverging_automata.automata","final_weights.1.opacity_override",1)
         ),
@@ -568,8 +588,8 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(0.5,"diverging_automata.weight.1.0"),
         "",
-      // }}}
-      // Third example {{{
+    // }}}
+    // Third example {{{
         parallel(
             sequence(
                 fadeOutAndFire(0.25,"diverging_automata.input.1.0"),
@@ -628,10 +648,8 @@ window.addEventListener("load",function() {
             "diverging_automata.weight.input.1",
             "diverging_automata.weight.mapsto"
         ),
-        "",
         hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
         smooth(0.5,"diverging_automata.marker","x",124.169), 
-        "",
         hireAndFadeIn(0.5,"diverging_automata.reader"),
         "",
         parallel(
@@ -685,7 +703,7 @@ window.addEventListener("load",function() {
             "diverging_automata.weight.1.0"
         ),
         "",
-      // }}}
+    // }}}
         fadeOutAndFire(0.25,
             "diverging_automata.5tuple",
             "diverging_automata.5tuple.cover",
@@ -694,8 +712,7 @@ window.addEventListener("load",function() {
             "diverging_automata.5tuple.transitions",
             "diverging_automata.5tuple.initial",
             "diverging_automata.5tuple.final",
-            "diverging_automata.criterion.lhs",
-            "diverging_automata.criterion.rhs",
+            "diverging_automata.criterion",
             "diverging_automata.automata",
             "diverging_automata.automata.box",
             "diverging_automata.weight.input.n",
@@ -706,7 +723,7 @@ window.addEventListener("load",function() {
             "diverging_automata.input.3.0",
             "diverging_automata.input.4plus"
         ),
-    // }}}
+  // }}}
     // Infinite languages {{{
         rotateNextTitle(),
         hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
@@ -750,7 +767,6 @@ window.addEventListener("load",function() {
             "infinite_languages.words.nfinite.examples.1",
             "infinite_languages.words.nfinite.examples.2"
         ),
-
 // }}}
     // Diverging languages {{{
         rotateNextTitle(),
@@ -812,15 +828,17 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_precondition_3",
             "diverging_rational_operations_precondition_4",
             "diverging_rational_operations_definition_1",
-            "diverging_rational_operations_definition_3",
+            "diverging_rational_operations_definition_2",
             "diverging_rational_operations_definition_4"
         ),
         parallel(
             smooth(0.5,"diverging_rational_operations_definition_5","y",-450.0),
-            smooth(0.5,"diverging_rational_operations_definition_2","y",-180.0)
+            smooth(0.5,"diverging_rational_operations_definition_3","y",-320.0)
         ),
         "",
         hireAndFadeInUseActor(0.5,"diverging_rational_operations_definition_6"),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_identity"),
         "",
         hireAndFadeInUseActors(0.5,
             "diverging_rational_operations_example_box",
@@ -835,17 +853,28 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_letter_2",
             "diverging_rational_operations_example_letter_3",
             "diverging_rational_operations_example_letter_4",
+            "diverging_rational_operations_example_letter_5plus",
             "diverging_rational_operations_example_letter_mapsto",
             "diverging_rational_operations_example_output_box"
         ),
         "",
         hireAndFadeInUseActors(0.5,
-            "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_left",
             "diverging_rational_operations_example_output_0_mapsto"
         ),
         "",
+        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
+        "",
         hireAndFadeIn(0.5,"diverging_rational_operations_example_output_0_mapsto_0"),
         "",
+        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
+        "",
+        hireUseActors(
+            "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_cover"
+        ),
+        moveToEnd("diverging_rational_operations_example_letter_pointer_left"),
+        moveToEnd("diverging_rational_operations_example_box"),
         parallel(
             smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",28),
             hireAndFadeIn(0.5,"diverging_rational_operations_example_output_1_mapsto")
@@ -904,12 +933,10 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(0.5,"diverging_rational_operations_example_output_dots"),
         "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_identity"),
-        "",
         hireAndFadeIn(0.5,"diverging_rational_language_definition"),
         "",
         fadeOutAndFire(0.5,
-            "diverging_rational_operations_definition_2",
+            "diverging_rational_operations_definition_3",
             "diverging_rational_operations_definition_5",
             "diverging_rational_operations_definition_6",
             "diverging_rational_operations_example_box",
@@ -921,9 +948,12 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_letter_2",
             "diverging_rational_operations_example_letter_3",
             "diverging_rational_operations_example_letter_4",
+            "diverging_rational_operations_example_letter_5plus",
             "diverging_rational_operations_example_letter_mapsto",
             "diverging_rational_operations_example_output_box",
             "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_cover",
+            "diverging_rational_operations_example_letter_pointer_left",
             "diverging_rational_operations_example_output_0_mapsto",
             "diverging_rational_operations_example_output_0_mapsto_0",
             "diverging_rational_operations_example_output_1_mapsto",
