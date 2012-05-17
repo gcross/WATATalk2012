@@ -1149,9 +1149,8 @@ window.addEventListener("load",function() {
             linear(0.5,styleFor("bidiverging_automata.5tuple.transitions"),"opacity",1),
             linear(0.5,styleFor("bidiverging_automata.5tuple.final"),"opacity",1)
         ),
-        hireAndFadeIn(0.5,"bidiverging_automata.criterion.1"),
         "",
-        hireAndFadeIn(0.5,"bidiverging_automata.criterion.2"),
+        hireAndFadeIn(0.5,"bidiverging_automata.criterion"),
         "",
         fadeOutAndFire(0.5,
             "bidiverging_automata.5tuple",
@@ -1161,8 +1160,7 @@ window.addEventListener("load",function() {
             "bidiverging_automata.5tuple.transitions",
             "bidiverging_automata.5tuple.initial",
             "bidiverging_automata.5tuple.final",
-            "bidiverging_automata.criterion.1",
-            "bidiverging_automata.criterion.2"
+            "bidiverging_automata.criterion"
         ),
     // }}}
     // Kleene's Theorem {{{
