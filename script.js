@@ -162,9 +162,11 @@ var titles = [ // Titles {{{
     "Diverging Languages",
     "Rational Operations",
     "Diverging Automata",
+    "Kleene's Theorem",
+    "Bi-diverging Languages",
+    "Bi-diverging Automata",
     "Matrix Product States ⇒ Weighted Automata",
     "Matrix Product States ⇐ Weighted Automata",
-    "Kleene's Theorem",
     "Language",
     "Weighted Language",
     "Rational Operations for Weighted Languages",
@@ -180,8 +182,6 @@ var titles = [ // Titles {{{
     "Kleene's Theorem for Diverging Languages",
     "Characterization Theorem for Diverging Languages",
     "Conclusion",
-    "Bi-diverging Languages",
-    "Bi-diverging Automata",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -301,10 +301,8 @@ window.addEventListener("load",function() {
 ]).concat((function() {
     var actor_names = [0.5]
     for(var i = 1; i <= 3; ++i) actor_names.push("is.defn." + i)
-    for(var i = -6; i <= +6; ++i) {
-        actor_names.push("is.particle." + i)
-        actor_names.push("is.arrow." + i + "." + spins[i+6])
-    }
+    for(var i = -6; i <= +6; ++i) actor_names.push("is.arrow." + i + "." + spins[i+6])
+    for(var i = -9; i <= +9; ++i) actor_names.push("is.particle." + i)
     return fadeOutAndFire.apply(null,actor_names)
 })()).concat([        
     // }}}
@@ -1089,6 +1087,37 @@ window.addEventListener("load",function() {
     // }}}
     // Bi-diverging languages {{{
         rotateNextTitle(),
+]).concat((function() {
+    var animations = []
+    for(var i = -9; i <= +9; ++i) {
+        animations.push(hire("is.particle." + i))
+        animations.push(set("is.particle." + i,"x",-i*80))
+        animations.push(set("is.particle." + i,"y",160))
+    }
+    return animations
+})()).concat([
+        "",
+]).concat((function() {
+    var animations = []
+    for(var i = 1; i <= +9; ++i) {
+        animations.push(decelerate(0.5,"is.particle." + i,"x",0))
+    }
+    return parallel.apply(null,animations)
+})()).concat([
+        "",
+]).concat((function() {
+    var animations = []
+    for(var i = -9; i <= -1; ++i) {
+        animations.push(decelerate(0.5,"is.particle." + i,"x",0))
+    }
+    return parallel.apply(null,animations)
+})()).concat([
+        ""
+]).concat((function() {
+    var actor_names = [0.5]
+    for(var i = -9; i <= +9; ++i) actor_names.push("is.particle." + i)
+    return [fadeOutAndFire.apply(null,actor_names)]
+})()).concat([
         hireAndFadeIn(0.5,"bidiverging_language"),
         "",
         hireAndFadeIn(0.5,"bidiverging_juxtaposition_operator"),
