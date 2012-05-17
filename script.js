@@ -166,6 +166,7 @@ var titles = [ // Titles {{{
     "Bi-diverging Languages",
     "Bi-diverging Automata",
     "Kleene's Theorem",
+    "Criteria for an Effective Ansatz",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1159,6 +1160,31 @@ window.addEventListener("load",function() {
             "bidiverging_kleene1",
             "bidiverging_kleene2",
             "bidiverging_kleene3"
+        ),
+    // }}}
+    // Ansatz criteria {{{
+        rotateNextTitle(),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "ansatz.criteria.1",
+            "ansatz.criteria.2",
+            "ansatz.criteria.3"
+        ),
+        "",
+        hireAndFadeInUseActors(0.5,
+            "ansatz.check.1",
+            "ansatz.check.2"
+        ),
+        "",
+        hireAndFadeIn(0.5,"ansatz.circle_around_3"),
+        "",
+        fadeOutAndFire(0.5,
+            "ansatz.criteria.1",
+            "ansatz.criteria.2",
+            "ansatz.criteria.3",
+            "ansatz.check.1",
+            "ansatz.check.2",
+            "ansatz.circle_around_3"
         ),
     // }}}
 // }}} Script
