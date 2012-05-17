@@ -2554,7 +2554,7 @@
        sodipodi:role="line"
        x="23.301924"
        y="172.74129"
-       id="tspan6204">No precondition on X or Y:</tspan></text>
+       id="tspan6204">For all X and Y:</tspan></text>
   <g
      id="diverging_rational_operations_definition_4"
      inkscape:label="#g5052">
@@ -2860,7 +2860,7 @@
        y="310.75909"
        x="21.638184"
        id="tspan15912"
-       sodipodi:role="line">Precondition:  Both X and Y contain only finite words</tspan></text>
+       sodipodi:role="line">For all X and Y containing only finite words:</tspan></text>
   <g
      id="diverging_rational_operations_definition_1"
      inkscape:label="#g4928">
@@ -3134,7 +3134,7 @@
        sodipodi:role="line"
        id="tspan11331"
        x="21.638184"
-       y="587.39032">Precondition:  X contains only finite, non-empty words</tspan></text>
+       y="587.39032">For all X containing only finite, non-empty words:</tspan></text>
   <g
      id="diverging_rational_operations_box_2"
      inkscape:label="#g4915">
@@ -3180,7 +3180,7 @@
        sodipodi:role="line"
        id="tspan12200"
        x="21.638184"
-       y="448.75909">Precondition:  X contains finite words and Y contains infinite words</tspan></text>
+       y="448.75909">For all X containing finite words and Y containing infinite words:</tspan></text>
   <g
      id="diverging_rational_operations_box_3"
      inkscape:label="#g4919">
@@ -3510,7 +3510,7 @@
          y="507.77954"
          x="446.18527"
          id="tspan3786"
-         sodipodi:role="line">sum of X(x) · Y(y)(n-|x|) for all xy = w</tspan></text>
+         sodipodi:role="line">sum of X(x) · Y(y, n-|x|) for all xy = w</tspan></text>
   </g>
     <!-- }}} -->
     <!-- diverging rational operations 2 {{{ -->
