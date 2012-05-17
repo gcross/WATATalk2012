@@ -1118,16 +1118,10 @@ window.addEventListener("load",function() {
     for(var i = -9; i <= +9; ++i) actor_names.push("is.particle." + i)
     return [fadeOutAndFire.apply(null,actor_names)]
 })()).concat([
-        hireAndFadeIn(0.5,"bidiverging_language"),
-        "",
-        hireAndFadeIn(0.5,"bidiverging_juxtaposition_operator"),
-        "",
-        hireAndFadeIn(0.5,"bidiverging_rational_language"),
+        hireAndFadeIn(0.5,"brl"),
         "",
         fadeOutAndFire(0.5,
-            "bidiverging_language",
-            "bidiverging_juxtaposition_operator",
-            "bidiverging_rational_language"
+            "brl"
         ),
     // }}}
     // Bi-diverging automata {{{
