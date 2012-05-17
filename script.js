@@ -165,23 +165,7 @@ var titles = [ // Titles {{{
     "Kleene's Theorem",
     "Bi-diverging Languages",
     "Bi-diverging Automata",
-    "Matrix Product States ⇒ Weighted Automata",
-    "Matrix Product States ⇐ Weighted Automata",
-    "Language",
-    "Weighted Language",
-    "Rational Operations for Weighted Languages",
     "Kleene's Theorem",
-    "Outline",
-    "Infinite Matrix Product States",
-    "Divergence",
-    "Diverging Automata",
-    "Kleene's Theorem for Diverging Languages",
-    "Infinite Languages",
-    "Diverging Languages",
-    "Rational Operations for Diverging Languages",
-    "Kleene's Theorem for Diverging Languages",
-    "Characterization Theorem for Diverging Languages",
-    "Conclusion",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
