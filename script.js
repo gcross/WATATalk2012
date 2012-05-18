@@ -160,6 +160,7 @@ var titles = [ // Titles {{{
     "Embrace Divergence!",
     "Infinite Languages",
     "Diverging Languages",
+    "Notational aside",
     "Rational Operations",
     "Diverging Automata",
     "Kleene's Theorem",
@@ -376,7 +377,7 @@ window.addEventListener("load",function() {
             "infinite_languages.words.nfinite.examples.1",
             "infinite_languages.words.nfinite.examples.2"
         ),
-// }}}
+    // }}}
     // Diverging languages {{{
         rotateNextTitle(),
         hireAndFadeIn(0.5,"diverging_languages.borderlines"),
@@ -398,6 +399,20 @@ window.addEventListener("load",function() {
             "diverging_languages.words.finite",
             "diverging_languages.words.infinite",
             "diverging_languages.language"
+        ),
+    // }}}
+    // Notational aside {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "notation.1",
+            "notation.2",
+            "notation.3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "notation.1",
+            "notation.2",
+            "notation.3"
         ),
     // }}}
     // Rational diverging operations {{{
