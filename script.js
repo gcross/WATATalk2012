@@ -168,6 +168,7 @@ var titles = [ // Titles {{{
     "Kleene's Theorem",
     "Criteria for an Effective Ansatz",
     "Dual Automata",
+    "Recipe for Computing Expectation Values",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1226,6 +1227,53 @@ window.addEventListener("load",function() {
             "dual_automata.automata",
             "dual_automata.arrow",
             "dual_automata.transducer"
+        ),
+    // }}}
+    // Expectation recipe {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"recipe.state"),
+        hireAndFadeIn(0.5,"recipe.expectation"),
+        "",
+        hireUseActor("recipe.state.cover","recipe.state"),
+        hireUseActor("recipe.dual","recipe.state.cover"),
+        linear(0.5,"recipe.state.cover","x",350),
+        fire("recipe.state.cover"),
+        "",
+        hireUseActor("recipe.state.cover","recipe.dual"),
+        hireUseActor("recipe.observable","recipe.state.cover"),
+        linear(0.5,"recipe.state.cover","x",350),
+        fire("recipe.state.cover"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "recipe.text.1",
+            "recipe.text.2"
+        ),
+        "",
+        hireUseActor("recipe.apply.cover","recipe.observable"),
+        hireUseActor("recipe.apply","recipe.apply.cover"),
+        linear(0.5,"recipe.apply.cover","x",350),
+        fire("recipe.apply.cover"),
+        "",
+        hireUseActor("recipe.jordan.cover","recipe.apply"),
+        hireUseActor("recipe.jordan","recipe.jordan.cover"),
+        linear(0.25,"recipe.jordan.cover","y",-170),
+        fire("recipe.jordan.cover"),
+        "",
+        hireUseActor("recipe.function.cover","recipe.jordan"),
+        hireUseActor("recipe.function","recipe.function.cover"),
+        linear(0.35,"recipe.function.cover","x",-270),
+        fire("recipe.function.cover"),
+        "",
+        fadeOutAndFire(0.5,
+            "recipe.apply",
+            "recipe.dual",
+            "recipe.expectation",
+            "recipe.function",
+            "recipe.jordan",
+            "recipe.observable",
+            "recipe.state",
+            "recipe.text.1",
+            "recipe.text.2"
         ),
     // }}}
 // }}} Script
