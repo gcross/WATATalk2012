@@ -167,6 +167,7 @@ var titles = [ // Titles {{{
     "Bi-diverging Automata",
     "Kleene's Theorem",
     "Criteria for an Effective Ansatz",
+    "Dual Automata",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1185,6 +1186,46 @@ window.addEventListener("load",function() {
             "ansatz.check.1",
             "ansatz.check.2",
             "ansatz.circle_around_3"
+        ),
+    // }}}
+    // Dual automata {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"dual_automata.definition"),
+        "",
+        parallel(
+            sequence(
+                wait(0),
+                hireAndFadeIn(0.5,"dual_automata.automata",makePartFocusActor("dual_automata.automata",["transitions","misc"]))
+            ),
+            sequence(
+                wait(0.25),
+                hireAndFadeIn(0.5,"dual_automata.arrow")
+            ),
+            sequence(
+                wait(0.5),
+                hireAndFadeIn(0.5,"dual_automata.transducer",makePartFocusActor("dual_automata.transducer",["transitions","misc"]))
+            )
+        ),
+        "",
+        set("dual_automata.automata","transitions.opacity",1),
+        set("dual_automata.transducer","transitions.opacity",1),
+        parallel(
+            linear(0.5,"dual_automata.automata","non_focused_opacity",0.25),
+            linear(0.5,"dual_automata.transducer","non_focused_opacity",0.25)
+        ),
+        "",
+        parallel(
+            linear(0.5,"dual_automata.automata","non_focused_opacity",1),
+            linear(0.5,"dual_automata.transducer","non_focused_opacity",1)
+        ),
+        set("dual_automata.automata","transitions.opacity",0),
+        set("dual_automata.transducer","transitions.opacity",0),
+        "",
+        fadeOutAndFire(0.5,
+            "dual_automata.definition",
+            "dual_automata.automata",
+            "dual_automata.arrow",
+            "dual_automata.transducer"
         ),
     // }}}
 // }}} Script
