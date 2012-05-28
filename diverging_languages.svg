@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -205,12 +205,12 @@
   </g>
   <g
      id="diverging_languages.language"
-     inkscape:label="#g9238">
+     inkscape:label="#g3142">
     <rect
        y="581.16235"
        x="55.06366"
-       height="35.831638"
-       width="303.57654"
+       height="35.831665"
+       width="362.01288"
        id="rect5329"
        style="fill:#d87a00;fill-opacity:0.19230772;stroke:none" />
     <text
@@ -223,7 +223,7 @@
          y="609.98865"
          x="27.799187"
          id="tspan3136"
-         sodipodi:role="line">A diverging language L is a pair of maps of the form:</tspan></text>
+         sodipodi:role="line">A diverging power series P is a pair of maps of the form:</tspan></text>
     <g
        transform="translate(10,0)"
        id="g4606">
@@ -268,7 +268,7 @@
            y="723.56372"
            x="28.558929"
            id="tspan5230"
-           sodipodi:role="line">L</tspan></text>
+           sodipodi:role="line">P</tspan></text>
       <path
          sodipodi:type="arc"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker-end:none"

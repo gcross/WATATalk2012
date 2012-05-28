@@ -58,11 +58,11 @@
        sodipodi:role="line"
        x="512.14319"
        y="276.10754"
-       id="tspan6418">the set of diverging languages</tspan><tspan
+       id="tspan6418">the set of diverging power</tspan><tspan
        sodipodi:role="line"
        x="512.14319"
        y="366.10754"
-       id="tspan13294">recognized by automata</tspan></text>
+       id="tspan13294">series recognized by automata</tspan></text>
   <g
      id="diverging_kleene2"
      transform="translate(0,9.59589)"
@@ -89,9 +89,9 @@
        y="596.10754"
        x="522.12756"
        sodipodi:role="line"
-       id="tspan13279">the set of rational </tspan><tspan
+       id="tspan13279">the set of rational diverging </tspan><tspan
        y="686.10754"
        x="512.14319"
        sodipodi:role="line"
-       id="tspan13281">diverging languages</tspan></text>
+       id="tspan13281">power series</tspan></text>
 </svg>

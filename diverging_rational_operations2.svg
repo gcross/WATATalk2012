@@ -569,12 +569,12 @@
      sodipodi:nodetypes="cc" />
   <g
      id="diverging_rational_language_definition"
-     inkscape:label="#g4710">
+     inkscape:label="#g4093">
     <rect
        y="568.4989"
        x="162.92932"
-       height="35.907104"
-       width="369.17108"
+       height="36.138802"
+       width="400.74036"
        id="rect5329"
        style="fill:#d87a00;fill-opacity:0.19230772;stroke:none" />
     <text
@@ -587,7 +587,7 @@
          id="tspan5327"
          y="595.27161"
          x="35.12196"
-         sodipodi:role="line">The set of rational diverging languages</tspan><tspan
+         sodipodi:role="line">The set of rational diverging power series</tspan><tspan
          y="630.27161"
          x="35.12196"
          sodipodi:role="line"
@@ -595,11 +595,11 @@
          y="665.27161"
          x="35.12196"
          sodipodi:role="line"
-         id="tspan7932">weighted languages, closing them over the</tspan><tspan
+         id="tspan7932">power series, closing them over the</tspan><tspan
          y="700.27161"
          x="35.12196"
          sodipodi:role="line"
-         id="tspan8458">rational operators just presented and then</tspan><tspan
+         id="tspan8458">rational operators just presented, and then</tspan><tspan
          y="735.27161"
          x="35.12196"
          sodipodi:role="line"

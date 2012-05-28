@@ -97,38 +97,40 @@
      inkscape:window-height="1152"
      id="namedview26763"
      showgrid="false"
-     inkscape:zoom="0.73058494"
+     inkscape:zoom="1.0332031"
      inkscape:cx="419.96234"
      inkscape:cy="305.40324"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2" />
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <g
-     id="brl"
-     inkscape:label="#g3144">
-    <g
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Dialog"
-       id="g3863"
-       transform="matrix(0.18530203,0,0,0.18530203,310.51275,176.73513)" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text5774"
+     transform="matrix(0.18530203,0,0,0.18530203,310.51275,176.73513)"
+     id="g3863"
+     style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Dialog" />
+  <text
+     xml:space="preserve"
+     style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-75.282143"
+     y="186.27435"
+     id="text5774"
+     sodipodi:linespacing="125%"><tspan
        y="186.27435"
        x="-75.282143"
-       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       xml:space="preserve"><tspan
-         id="tspan5776"
-         sodipodi:role="line"
-         x="-75.282143"
-         y="186.27435" /></text>
+       sodipodi:role="line"
+       id="tspan5776" /></text>
+  <g
+     id="brl"
+     inkscape:label="#g3308">
     <g
        inkscape:label="#g9924"
        id="brl.1">
       <rect
          style="fill:#d87a00;fill-opacity:0.19230772;stroke:none"
          id="rect5329"
-         width="317.12662"
+         width="396.49146"
          height="35.831635"
          x="65.06366"
          y="161.16235" />
@@ -143,7 +145,7 @@
            sodipodi:role="line"
            id="tspan3136"
            x="37.799187"
-           y="189.98865">A bi-diverging language L is a map of the form:</tspan></text>
+           y="189.98865">A bi-diverging power series P is a map of the form:</tspan></text>
     </g>
     <g
        inkscape:label="#g7731"
@@ -153,13 +155,13 @@
          sodipodi:linespacing="125%"
          id="text5228"
          y="322.91577"
-         x="166.76175"
+         x="162.76175"
          style="font-size:84.88611603px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
          xml:space="preserve"><tspan
            y="322.91577"
-           x="166.76175"
+           x="162.76175"
            id="tspan5230"
-           sodipodi:role="line">L</tspan></text>
+           sodipodi:role="line">P</tspan></text>
       <path
          sodipodi:type="arc"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker-end:none"
@@ -287,13 +289,13 @@
          style="fill:none;stroke:#000000;stroke-width:0.89999998px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
     </g>
     <g
-       inkscape:label="#g19439"
+       inkscape:label="#g3302"
        id="brl.5">
       <rect
          y="661.16235"
          x="65.06366"
-         height="37.767391"
-         width="429.39883"
+         height="37.767395"
+         width="482.63135"
          id="rect19126"
          style="fill:#d87a00;fill-opacity:0.19230772;stroke:none" />
       <text
@@ -306,11 +308,11 @@
            y="689.98865"
            x="37.799187"
            id="tspan19130"
-           sodipodi:role="line">A rational bi-diverging language is a bi-diverging language formed</tspan><tspan
+           sodipodi:role="line">A rational bi-diverging power series is a bi-diverging power series</tspan><tspan
            y="730.48865"
            x="37.799187"
            sodipodi:role="line"
-           id="tspan19132">from the juxtaposition of two rational diverging languages.</tspan></text>
+           id="tspan19132">formed from the juxtaposition of rational diverging power series.</tspan></text>
     </g>
     <text
        inkscape:label="#text19252"
@@ -323,11 +325,11 @@
          sodipodi:role="line"
          id="tspan19254"
          x="37.182194"
-         y="449.98865">Bi-diverging languages can be formed from the juxtaposition of</tspan><tspan
+         y="449.98865">Bi-diverging power series can be formed from the juxtaposition of</tspan><tspan
          id="tspan19256"
          sodipodi:role="line"
          x="37.182194"
-         y="490.48865">two diverging languages:</tspan></text>
+         y="490.48865">two diverging power series:</tspan></text>
     <g
        transform="translate(2.2208061,0)"
        inkscape:label="#g9794"

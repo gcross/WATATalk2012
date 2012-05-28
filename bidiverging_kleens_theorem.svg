@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,7 +41,7 @@
      id="namedview26763"
      showgrid="true"
      inkscape:zoom="0.73058495"
-     inkscape:cx="247.08056"
+     inkscape:cx="904.08835"
      inkscape:cy="260.81104"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -62,7 +62,7 @@
        sodipodi:role="line"
        x="512.23627"
        y="356.8808"
-       id="tspan6418">bidiverging languages</tspan></text>
+       id="tspan6418">bi-diverging power series</tspan></text>
   <g
      id="bidiverging_kleene2"
      transform="translate(0,9.595886)"
@@ -89,9 +89,9 @@
        id="tspan11129"
        y="599.93079"
        x="512.25787"
-       sodipodi:role="line">the set of infinite languages</tspan><tspan
+       sodipodi:role="line">the set of bi-diverging power series</tspan><tspan
        y="676.8808"
        x="512.25787"
        sodipodi:role="line"
-       id="tspan11131">recognized by bidiverging automata</tspan></text>
+       id="tspan11131">recognized by bi-diverging automata</tspan></text>
 </svg>
