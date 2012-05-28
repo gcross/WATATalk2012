@@ -166,9 +166,9 @@ var titles = [ // Titles {{{
     "Rational Operations",
     "Diverging Automata",
     "Kleene's Theorem",
-    "Bi-diverging Power Series",
+    //"Bi-diverging Power Series",
     "Bi-diverging Automata",
-    "Kleene's Theorem",
+    //"Kleene's Theorem",
     "Outline",
     "Criteria for an Effective Ansatz",
     "Dual Automata",
@@ -1158,14 +1158,16 @@ window.addEventListener("load",function() {
     for(var i = -9; i <= +9; ++i) actor_names.push("is.particle." + i)
     return [fadeOutAndFire.apply(null,actor_names)]
 })()).concat([
+/*
         hireAndFadeIn(0.5,"brl"),
         "",
         fadeOutAndFire(0.5,
             "brl"
         ),
-    // }}}
+*/
+// }}}
     // Bi-diverging automata {{{
-        rotateNextTitle(),
+        // rotateNextTitle(),
         hireUseActors("bidiverging_automata.5tuple","bidiverging_automata.5tuple.cover"),
         linear(0.5,"bidiverging_automata.5tuple.cover","x",470),
         hireAndFlashIn(0.5,0.25,
@@ -1204,6 +1206,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Kleene's Theorem {{{
+/*
         rotateNextTitle(),
         hireAndFlashIn(0.75,0.375,
             "bidiverging_kleene1",
@@ -1216,6 +1219,7 @@ window.addEventListener("load",function() {
             "bidiverging_kleene2",
             "bidiverging_kleene3"
         ),
+*/
     // }}}
     // Outline {{{
         rotateNextTitle(),
