@@ -283,7 +283,6 @@ window.addEventListener("load",function() {
         fadeIn(0.5,"is.proper_search",0),
         "",
         fadeOutAndFire(0.5,"is.proper_search"),
-        "",
         parallel(
             hireAndFadeIn(0.5,"is.defn.1"),
             sequence(
