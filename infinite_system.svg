@@ -29,8 +29,8 @@
      id="namedview4066"
      showgrid="false"
      inkscape:zoom="0.61458333"
-     inkscape:cx="494.91525"
-     inkscape:cy="291.95627"
+     inkscape:cx="755.25423"
+     inkscape:cy="226.87152"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -590,7 +590,9 @@
        x="410.78568"
        y="543.9314">6.023 • 10<tspan
    style="font-size:65.00091553%;baseline-shift:super"
-   id="tspan19308">23</tspan> ≈ ∞</tspan></text>
+   id="tspan19308">23</tspan> ≈ <tspan
+   style="font-weight:bold;-inkscape-font-specification:Arial Bold;font-size:56px"
+   id="tspan3089">∞</tspan> particles</tspan></text>
   <text
      inkscape:label="#text8206"
      sodipodi:linespacing="125%"
