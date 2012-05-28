@@ -9413,6 +9413,102 @@
        y="451.47757"
        id="tspan3047">quantum simulation</tspan></text>
     <!-- }}} --></g>
+    <!-- outline {{{ -->
+  <g
+     id="outline.1"
+     inkscape:label="#g6400">
+    <path
+       transform="matrix(0.81,0,0,0.81,12.504801,102.93928)"
+       d="m 81.300566,225.99622 a 15.485823,15.485823 0 1 1 -30.971646,0 15.485823,15.485823 0 1 1 30.971646,0 z"
+       sodipodi:ry="15.485823"
+       sodipodi:rx="15.485823"
+       sodipodi:cy="225.99622"
+       sodipodi:cx="65.814743"
+       id="path5610"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       sodipodi:type="arc" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text6380"
+       y="297.6106"
+       x="114.20794"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:0.81960784;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+       xml:space="preserve"><tspan
+         y="297.6106"
+         x="114.20794"
+         id="tspan6382"
+         sodipodi:role="line">Motivation: quantum systems as power series</tspan></text>
+  </g>
+  <text
+     sodipodi:linespacing="125%"
+     id="text6386"
+     y="357.6106"
+     x="114.20794"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:0.81960784;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+     xml:space="preserve"><tspan
+       y="357.6106"
+       x="114.20794"
+       id="tspan6388"
+       sodipodi:role="line" /></text>
+  <g
+     id="outline.2"
+     inkscape:label="#g6405">
+    <path
+       transform="matrix(0.81,0,0,0.81,12.504801,262.93928)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path6384"
+       sodipodi:cx="65.814743"
+       sodipodi:cy="225.99622"
+       sodipodi:rx="15.485823"
+       sodipodi:ry="15.485823"
+       d="m 81.300566,225.99622 a 15.485823,15.485823 0 1 1 -30.971646,0 15.485823,15.485823 0 1 1 30.971646,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:0.81960784;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+       x="114.20794"
+       y="457.6106"
+       id="text6390"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6392"
+         x="114.20794"
+         y="457.6106">Diverging power series and automata</tspan></text>
+  </g>
+  <g
+     id="outline.3"
+     inkscape:label="#g6410">
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path6394"
+       sodipodi:cx="65.814743"
+       sodipodi:cy="225.99622"
+       sodipodi:rx="15.485823"
+       sodipodi:ry="15.485823"
+       d="m 81.300566,225.99622 a 15.485823,15.485823 0 1 1 -30.971646,0 15.485823,15.485823 0 1 1 30.971646,0 z"
+       transform="matrix(0.81,0,0,0.81,12.504801,422.93928)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:0.81960784;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+       x="114.20794"
+       y="617.6106"
+       id="text6396"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6398"
+         x="114.20794"
+         y="617.6106">Application of diverging automata to simulation</tspan></text>
+  </g>
+  <rect
+     style="fill:none;stroke:#000000;stroke-opacity:1;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none"
+     id="outline.highlight"
+     width="982.77417"
+     height="82.125961"
+     x="20.612915"
+     y="246.19604"
+     inkscape:label="#rect10385" />
+    <!-- }}} -->
 <!-- }}} --> </defs>
 <!-- Resources {{{ --> <defs id="resources">
     <!-- standard_backdrop {{{ -->

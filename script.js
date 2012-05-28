@@ -155,7 +155,9 @@ function rotateTitle(index) { // {{{
 } // }}}
 // }}}
 var titles = [ // Titles {{{
+    "Outline",
     "Motivation",
+    "Outline",
     "Incorporating Weights into Infinite Languages",
     "Embrace Divergence!",
     "Infinite Languages",
@@ -167,9 +169,11 @@ var titles = [ // Titles {{{
     "Bi-diverging Power Series",
     "Bi-diverging Automata",
     "Kleene's Theorem",
+    "Outline",
     "Criteria for an Effective Ansatz",
     "Dual Automata",
     "Recipe for Computing Expectation Values",
+    "Outline",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -198,7 +202,24 @@ window.addEventListener("load",function() {
             titles[nextTitleIndex()]
         ),
     // }}} Title
+    // Outline {{{
+        hireAndFlashIn(0.5,0.25,
+            "outline.1",
+            "outline.2",
+            "outline.3"
+        ),
+        "",
+        hireAndFadeIn(0.5,"outline.highlight"),
+        "",
+        fadeOutAndFire(0.5,
+            "outline.highlight",
+            "outline.1",
+            "outline.2",
+            "outline.3"
+        ),
+    // }}}
     // Infinite system {{{
+        rotateNextTitle(),
         hireAndFadeIn(0.5,"is.particle.0"),
 ]).concat((function() {
     var animations = []
@@ -293,6 +314,24 @@ window.addEventListener("load",function() {
     for(var i = -9; i <= +9; ++i) actor_names.push("is.particle." + i)
     return fadeOutAndFire.apply(null,actor_names)
 })()).concat([        
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        hireAndFadeInUseActors(0.5,
+            "outline.highlight",
+            "outline.1",
+            "outline.2",
+            "outline.3"
+        ),
+        "",
+        smooth(0.5,"outline.highlight","y",160),
+        "",
+        fadeOutAndFire(0.5,
+            "outline.highlight",
+            "outline.1",
+            "outline.2",
+            "outline.3"
+        ),
     // }}}
     // Divergence {{{
         rotateNextTitle(),
@@ -1179,6 +1218,28 @@ window.addEventListener("load",function() {
             "bidiverging_kleene3"
         ),
     // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        hireUseActor("outline.highlight"),
+        set("outline.highlight","y",160),
+        parallel(
+            hireAndFadeInUseActors(0.5,
+                "outline.1",
+                "outline.2",
+                "outline.3"
+            ),
+            fadeIn(0.5,"outline.highlight")
+        ),
+        "",
+        smooth(0.5,"outline.highlight","y",320),
+        "",
+        fadeOutAndFire(0.5,
+            "outline.highlight",
+            "outline.1",
+            "outline.2",
+            "outline.3"
+        ),
+    // }}}
     // Ansatz criteria {{{
         rotateNextTitle(),
         "",
@@ -1289,6 +1350,14 @@ window.addEventListener("load",function() {
             "recipe.state",
             "recipe.text.1",
             "recipe.text.2"
+        ),
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        hireAndFadeInUseActors(0.5,
+            "outline.1",
+            "outline.2",
+            "outline.3"
         ),
     // }}}
 // }}} Script
