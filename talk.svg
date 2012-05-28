@@ -5588,17 +5588,17 @@
        id="g4516">
       <text
          xml:space="preserve"
-         style="font-size:26.31690216px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         x="67.443222"
+         style="font-size:26.31690216px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         x="173.44322"
          y="152.85768"
          id="text5954-1"
          sodipodi:linespacing="100%"><tspan
            y="152.85768"
-           x="67.443222"
+           x="173.44322"
            id="tspan9168"
-           sodipodi:role="line">diverging</tspan><tspan
+           sodipodi:role="line">bi-diverging</tspan><tspan
            y="179.17459"
-           x="67.443222"
+           x="173.44322"
            id="tspan9170"
            sodipodi:role="line">automata</tspan></text>
     </g>
@@ -5648,9 +5648,9 @@
      style="fill:#ffffff;fill-opacity:1;stroke:none"
      id="bidiverging_automata.5tuple.cover"
      width="444.21448"
-     height="46.514603"
+     height="54.450733"
      x="38.234497"
-     y="156.23851"
+     y="148.30238"
      inkscape:label="#rect10404" />
   <flowRoot
      xml:space="preserve"
@@ -5662,7 +5662,7 @@
          height="149.65311"
          x="-524.60815"
          y="643.01501" /></flowRegion><flowPara
-       id="flowPara4054"></flowPara></flowRoot>  <text
+       id="flowPara4054" /></flowRoot>  <text
      sodipodi:linespacing="125%"
      id="text8702"
      y="403.82236"
