@@ -162,16 +162,16 @@ var titles = [ // Titles {{{
     "Embrace Divergence!",
     "Infinite Languages",
     "Diverging Power Series",
-    "Notational aside",
-    "Rational Operations",
+    //"Notational aside",
+    //"Rational Operations",
     "Diverging Automata",
-    "Kleene's Theorem",
+    //"Kleene's Theorem",
     //"Bi-diverging Power Series",
     //"Bi-diverging Automata",
     //"Kleene's Theorem",
     "Outline",
     "Criteria for an Effective Ansatz",
-    // "Dual Automata",
+    "Dual Automata",
     "Recipe for Computing Expectation Values",
     "Outline",
 ] // }}} Titles
@@ -440,6 +440,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Notational aside {{{
+/*
         rotateNextTitle(),
         hireAndFlashIn(0.5,0.25,
             "notation.1",
@@ -452,8 +453,10 @@ window.addEventListener("load",function() {
             "notation.2",
             "notation.3"
         ),
+*/
     // }}}
     // Rational diverging operations {{{
+/*
         rotateNextTitle(),
         hireAndFlashIn(0.5,0.25,
             "diverging_rational_operations_box_1",
@@ -630,6 +633,7 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_identity",
             "diverging_rational_language_definition"
         ),
+*/
     // }}}
   // Diverging automata {{{
         rotateNextTitle(),
@@ -1112,6 +1116,7 @@ window.addEventListener("load",function() {
         ),
   // }}}
     // Kleene's Theorem {{{
+/*
         rotateNextTitle(),
         hireAndFlashIn(0.75,0.375,
             "diverging_kleene1",
@@ -1124,6 +1129,7 @@ window.addEventListener("load",function() {
             "diverging_kleene2",
             "diverging_kleene3"
         ),
+*/
     // }}}
     // Bi-diverging languages {{{
 /*
@@ -1273,7 +1279,6 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Dual automata {{{
-/*
         rotateNextTitle(),
         hireAndFadeIn(0.5,"dual_automata.definition"),
         "",
@@ -1312,7 +1317,6 @@ window.addEventListener("load",function() {
             "dual_automata.arrow",
             "dual_automata.transducer"
         ),
-*/
     // }}}
     // Expectation recipe {{{
         rotateNextTitle(),
