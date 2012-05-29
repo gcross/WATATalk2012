@@ -167,11 +167,11 @@ var titles = [ // Titles {{{
     "Diverging Automata",
     "Kleene's Theorem",
     //"Bi-diverging Power Series",
-    "Bi-diverging Automata",
+    //"Bi-diverging Automata",
     //"Kleene's Theorem",
     "Outline",
     "Criteria for an Effective Ansatz",
-    "Dual Automata",
+    // "Dual Automata",
     "Recipe for Computing Expectation Values",
     "Outline",
 ] // }}} Titles
@@ -1126,6 +1126,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Bi-diverging languages {{{
+/*
         rotateNextTitle(),
 ]).concat((function() {
     var animations = []
@@ -1158,6 +1159,7 @@ window.addEventListener("load",function() {
     for(var i = -9; i <= +9; ++i) actor_names.push("is.particle." + i)
     return [fadeOutAndFire.apply(null,actor_names)]
 })()).concat([
+*/
 /*
         hireAndFadeIn(0.5,"brl"),
         "",
@@ -1168,6 +1170,7 @@ window.addEventListener("load",function() {
 // }}}
     // Bi-diverging automata {{{
         // rotateNextTitle(),
+/*
         hireUseActors("bidiverging_automata.5tuple","bidiverging_automata.5tuple.cover"),
         linear(0.5,"bidiverging_automata.5tuple.cover","x",470),
         hireAndFlashIn(0.5,0.25,
@@ -1204,6 +1207,7 @@ window.addEventListener("load",function() {
             "bidiverging_automata.5tuple.final",
             "bidiverging_automata.criterion"
         ),
+*/
     // }}}
     // Kleene's Theorem {{{
 /*
@@ -1269,6 +1273,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Dual automata {{{
+/*
         rotateNextTitle(),
         hireAndFadeIn(0.5,"dual_automata.definition"),
         "",
@@ -1307,6 +1312,7 @@ window.addEventListener("load",function() {
             "dual_automata.arrow",
             "dual_automata.transducer"
         ),
+*/
     // }}}
     // Expectation recipe {{{
         rotateNextTitle(),
