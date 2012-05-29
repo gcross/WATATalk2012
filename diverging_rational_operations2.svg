@@ -96,7 +96,7 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="0.99999999"
-     inkscape:cx="406.4673"
+     inkscape:cx="520.9673"
      inkscape:cy="328.58987"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -793,29 +793,29 @@
        xml:space="preserve"
        style="font-size:32.37732315px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:120.00000477%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="473.35989"
-       y="363.13858"
+       y="360.05911"
        id="text16044"
        sodipodi:linespacing="120%"><tspan
          id="tspan3152"
          sodipodi:role="line"
          x="473.35989"
-         y="363.13858">sum of X(x<tspan
-   id="tspan3182"
-   style="font-size:65.00091553%;baseline-shift:super">1</tspan>)∙X(x<tspan
-   id="tspan3184"
-   style="font-size:65.00091553%;baseline-shift:super">2</tspan>)∙∙∙X(x<tspan
-   id="tspan3186"
-   style="font-size:65.00091553%;baseline-shift:super">k</tspan>) for</tspan><tspan
+         y="360.05911">sum of X(x<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3136">1</tspan>)∙X(x<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3140">2</tspan>)∙∙∙X(x<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3144">k</tspan>) for</tspan><tspan
          id="tspan3208"
          sodipodi:role="line"
          x="473.35989"
-         y="401.99136">x<tspan
-   id="tspan3196"
-   style="font-size:65.00091553%;baseline-shift:super">1</tspan>x<tspan
-   id="tspan3194"
-   style="font-size:65.00091553%;baseline-shift:super">2</tspan>...x<tspan
-   id="tspan3192"
-   style="font-size:65.00091553%;baseline-shift:super">k</tspan> = w[0,n] where w[n,∞] in X<tspan
+         y="398.9119">x<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3124">1</tspan>x<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3128">2</tspan>...x<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3132">k</tspan> = w[0,n] where w[n,∞] in X<tspan
    id="tspan3198"
    style="font-size:65.00091553%;baseline-shift:super">ω</tspan></tspan></text>
   </g>
